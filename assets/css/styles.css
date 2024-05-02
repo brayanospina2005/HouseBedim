@@ -96,6 +96,8 @@ img {
 .nav__logo{
     color: var(--white-color);
     font-weight: var(--font-semi-bold);
+    width: 150px;
+    height: auto;
 }
 
 .nav__toggle,
@@ -103,6 +105,15 @@ img {
     font-size: 1.5rem;
     cursor: pointer;
    
+}
+
+footer {
+    z-index: var(--z-fixed);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: small;
 }
 
 
@@ -301,6 +312,9 @@ img {
         height: calc(var(--header-height) + 2rem);
     }
 
+    .home__button{
+        margin-left: 50px;
+    }
     .nav__toggle,
     .nav__close{
         display: none;
@@ -334,6 +348,71 @@ img {
         right: 0;
     }
 
+    .home__social{
+        left: 0;
+    }
+
+    .swiper-pagination{
+        top: 10rem;
+    }
+
+    .swiper-pagination-total{
+        font-size: 1.5rem;
+    }
+
+    .swiper-navigation{
+        right: 0;
+        column-gap: 3.5rem;
+    }
+
+    .swiper-button-prev,
+    .swiper-button-next{
+        font-size: 3rem;
+    }
 
 }
 
+@media screen and (min-width: 800px) and (min-height: 800px){
+    .home__article{
+        padding-top: 17rem;
+    }
+
+    .swiper-pagination{
+        top: 13rem;
+    }
+    
+}
+
+@media screen and (min-width: 2048px) {
+   .container,
+   .home__content{
+         max-width: 1550px;
+   }
+    
+   .home__swiper,
+   .home__content,
+   .home__img,
+   .home__shadow{
+         max-height: 1000px;
+   }
+
+}
+
+/* animation */
+
+/* Definir la animación */
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+/* Aplicar la animación a los elementos deseados */
+/* .home__article, */
+.swiper-pagination,
+.container,
+.home__content,
+.home__swiper,
+.home__img,
+.home__shadow {
+    animation: fadeIn 2s ease-in-out;
+}

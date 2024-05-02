@@ -37,6 +37,10 @@ const swiperHome = new Swiper('.home__swiper', {
     grabCursor: true,
     centeredSlides: true,
     slidesPerView: 'auto',
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
     coverflowEffect: {
       rotate: 0,
       stretch: 0,
